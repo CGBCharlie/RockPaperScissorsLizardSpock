@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+  <title>Rock, Paper, Scissors, Lizard, Spock</title>
+
+  <script language="javascript" type="text/javascript" src="rpsls.js"></script>
+</head>
+<body>
+  <!-- Title and Score -->
+  <div class="container">
+    <img class="img-md" src="./images/logo-bonus.svg">
+    <div class="score img-md">
+      <p>SCORE</p>
+      <p id="score" class="score-number">0</p>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div id="userChoiceContainer" class="pentagon-container">
+    <img class="pentagon" src="./images/bg-pentagon.svg">
+    <div id="scissors" class="buttons scissors scissors-layout1" onclick="RPS(this.id)">
+      <img src="./images/icon-scissors.svg">
+    </div>
+    <div id="paper" class="buttons paper paper-layout1" onclick="RPS(this.id)">
+      <img src="./images/icon-paper.svg">
+    </div>
+    <div id="rock" class="buttons rock rock-layout1" onclick="RPS(this.id)">
+      <img src="./images/icon-rock.svg">
+    </div>
+    <div id="lizard" class="buttons lizard lizard-layout1" onclick="RPS(this.id)">
+      <img src="./images/icon-lizard.svg">
+    </div>
+    <section id="sp">
+      <div id="spock" class="buttons spock spock-layout1" onclick="RPS(this.id)">
+        <img src="./images/icon-spock.svg">
+      </div>
+    </section>
+  </div>
+
+  <!-- Table Game -->
+  <table id="UGC">
+    <thead>
+      <td id="td1">
+        <p class="">YOU PICKED</p>
+      </td>
+      <td id="td2">
+        <p class="">THE HOUSE PICKED</p>
+      </td>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="td3">
+          <div id="scissorsChoice" class="buttons scissors centerimg">
+            <img src="./images/icon-scissors.svg">
+          </div>
+          <div id="paperChoice" class="buttons paper centerimg">
+            <img src="./images/icon-paper.svg">
+          </div>
+          <div id="rockChoice" class="buttons rock centerimg">
+            <img src="./images/icon-rock.svg">
+          </div>
+          <div id="lizardChoice" class="buttons lizard centerimg">
+            <img src="./images/icon-lizard.svg">
+          </div>
+          <div id="spockChoice" class="buttons spock centerimg">
+            <img src="./images/icon-spock.svg">
+          </div>
+        </td>
+        <td id="td4">
+          <br />
+          <div class="emptyChoice centerimg"></div>
+          <div id="scissorsChoiceCp" class="buttons scissors centerimg">
+            <img src="./images/icon-scissors.svg">
+          </div>
+          <div id="paperChoiceCp" class="buttons paper centerimg">
+            <img src="./images/icon-paper.svg">
+          </div>
+          <div id="rockChoiceCp" class="buttons rock centerimg">
+            <img src="./images/icon-rock.svg">
+          </div>
+          <div id="lizardChoiceCp" class="buttons lizard centerimg">
+            <img src="./images/icon-lizard.svg">
+          </div>
+          <div id="spockChoiceCp" class="buttons spock centerimg">
+            <img src="./images/icon-spock.svg">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Table Result -->
+  <table id="GameResult">
+    <thead>
+      <td>
+      </td>
+      <td>
+        <br />
+        <br />
+        <br />
+        <br />
+      </td>
+      <td>
+      </td>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <div class="result">
+            <p id="output">YOU LOSE</p>
+            <button type="button" class="btnPA" onclick="playAgain()">PLAY AGAIN</button>
+          </div>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ 
+  <!-- Rules -->
+  <div class="btn-mob">
+    <button type="button" class="btn" onclick="rules()">RULES</button>
+  </div>
+
+  <!-- Popup Rules Img -->
+  <div id="popup" class="popup-rules">
+    <div class="popup-title">
+      <h2 class="txt-blue">RULES</h2>
+      <img src="./images/icon-close.svg" onclick="closeRules()">
+    </div>
+    <img src="./images/image-rules-bonus.svg">
+  </div>
+</body>
+</html>
